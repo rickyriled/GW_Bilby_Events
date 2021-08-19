@@ -49,12 +49,12 @@ injection_parameters = dict(
     ra=ra, dec=dec
 )
 
-waveform_arguments = dict(waveform_approximant='TaylorF2',
+waveform_arguments = dict(waveform_approximant='TaylorF2ThreePointFivePN',
                           reference_frequency=20.)
 
 waveform_generator = bilby.gw.WaveformGenerator(
     duration=duration, sampling_frequency=sampling_frequency,
-    frequency_domain_source_model=bilby.gw.source.lal_binary_neutron_star,
+    frequency_domain_source_model=bilby.gw.source.lal_binary_black_hole,
     waveform_arguments=waveform_arguments
 )
 
@@ -101,9 +101,11 @@ prior_dictionary = dict(
                                latex_label='$a_1$', unit=None, boundary=None),
     a_2=bilby.gw.prior.Uniform(name='a_2', minimum=0, maximum=0.05,
                                latex_label='$a_2$', unit=None, boundary=None),
-    tilt_1=bilby.prior.Sine(name='tilt_1', latex_label='$\\theta_1$', unit=None),
-    tilt_2=bilby.prior.Sine(name='tilt_2', latex_label='$\\theta_2$', unit=None),
-    phi_12=bilby.gw.prior.Uniform(name='phi_12', minimum=0, maximum=2 * np.pi,
+    tilt_1=bilby.prior.Sine(name='tilt_1', latex_label='$\\theta_1$', unit=None,
+                            minimum=0.0, maximum=0.0),
+    tilt_2=bilby.prior.Sine(name='tilt_2', latex_label='$\\theta_2$', unit=None,
+                            minimum=0.0, maximum=0.0),
+    phi_12=bilby.gw.prior.Uniform(name='phi_12', minimum=0.0, maximum=0.0,
                                   boundary='periodic', latex_label='$\\Delta\\phi$', unit=None),
     phi_jl=bilby.gw.prior.Uniform(name='phi_jl', minimum=0, maximum=2 * np.pi,
                                   boundary='periodic', latex_label='$\\phi_{JL}$', unit=None),
@@ -121,7 +123,6 @@ prior_dictionary = dict(
 )
 
 priors = bilby.gw.prior.BBHPriorDict(dictionary=prior_dictionary)
-
 
 # set a small margin on time of arrival 
 priors['geocent_time'] = bilby.core.prior.DeltaFunction(
