@@ -8,37 +8,37 @@ from gwpy.timeseries import TimeSeries
 import numpy as np
 
 
-outdir = '/Users/rickwilde/Desktop/summer_research/git'
+outdir = '/home/ricky/Deeps_script'
 # outdir = '/scrah/users/deep1018/GW170817-dynesty/inject-lambda-0-sample-z-flatz-prior-run-2'
 label = 'inject-lambda-0-sample-z-flat-h0-prior-O5'
 bilby.core.utils.setup_logger(outdir=outdir, label=label,
                               log_level='info')
 logger = bilby.core.utils.logger
 
-roll_off = 0.2  # Roll off duration of tukey window in seconds
+roll_off = 0.4  # Roll off duration of tukey window in seconds
 
 # Injection parameters
 # Inject the following signal and sample on the redshift
-chirp_mass =  1.18
-mass_ratio = 0.869
+chirp_mass =  1.43
+mass_ratio = 0.833 
 a_1 = 0.
 a_2 = 0.
 tilt_1 = 0.
 tilt_2 = 0.
 phi_12 = 0.
-luminosity_distance = 200
-theta_jn = 146./180. * np.pi
+luminosity_distance = 50
+theta_jn = 0.1
 phi_jl = 0.
 psi=2.659
 phase=1.3
 
 # These are two of the really important variables 
-ra = RA_NGC_4993
-dec = DEC_NGC_4993
+ra = 5.445
+dec = 0.0
 
-trigger_time = 1187008882.44
+trigger_time = 1264069376 
 sampling_frequency = 4096
-duration = 128
+duration = 320
 start_time = trigger_time - duration
 
 injection_parameters = dict(
@@ -55,15 +55,14 @@ waveform_arguments = dict(waveform_approximant='TaylorF2',
 waveform_generator = bilby.gw.WaveformGenerator(
     duration=duration, sampling_frequency=sampling_frequency,
     frequency_domain_source_model=bilby.gw.source.lal_binary_neutron_star,
-    parameter_conversion=my_conversion_function,
     waveform_arguments=waveform_arguments
 )
 
 # load PSD files for O5
 psd_filenames = {
-    'H1': '/home/deep1018/bilby-test-run/data/O5_PSDS/AplusDesign.txt',
-    'L1': '/home/deep1018/bilby-test-run/data/O5_PSDS/AplusDesign.txt',
-    'V1': '/home/deep1018/bilby-test-run/data/O5_PSDS/avirgo_O5high_NEW.txt'
+    'H1': 'aligo_O4high_extrapolated.txt',
+    'L1': 'aligo_O4high_extrapolated.txt',
+    'V1': 'avirgo_O4high_NEW.txt'
 }
 
 ifo_list = bilby.gw.detector.InterferometerList([])
@@ -94,9 +93,9 @@ ifo_list.plot_data(outdir=outdir, label=label)
 
 # create a GW170817 prior; sample in chirp_mass and mass_ratio
 prior_dictionary = dict(
-    chirp_mass=bilby.gw.prior.Uniform(name='chirp_mass', minimum=1.17, maximum=1.19),
+    chirp_mass=bilby.gw.prior.Uniform(name='chirp_mass', minimum=1.40, maximum=1.46),
     mass_ratio=bilby.gw.prior.Uniform(name='mass_ratio', minimum=0.65, maximum=1),
-    mass_1=bilby.gw.prior.Constraint(name='mass_1', minimum=1.1, maximum=1.9),
+    mass_1=bilby.gw.prior.Constraint(name='mass_1', minimum=1.3, maximum=2.1),
     mass_2=bilby.gw.prior.Constraint(name='mass_2', minimum=1.1, maximum=1.9),
     a_1=bilby.gw.prior.Uniform(name='a_1', minimum=0, maximum=0.05,
                                latex_label='$a_1$', unit=None, boundary=None),
@@ -109,7 +108,7 @@ prior_dictionary = dict(
     phi_jl=bilby.gw.prior.Uniform(name='phi_jl', minimum=0, maximum=2 * np.pi,
                                   boundary='periodic', latex_label='$\\phi_{JL}$', unit=None),
     luminosity_distance=bilby.gw.prior.UniformComovingVolume(name='luminosity_distance',
-                                                             minimum=10, maximum=500, latex_label='$d_L$',
+                                                             minimum=10, maximum=150, latex_label='$d_L$',
                                                              unit='Mpc', boundary=None),
     dec=bilby.prior.Cosine(name='dec', latex_label='$\\mathrm{DEC}$',
                            unit=None, minimum=-np.pi / 2, maximum=np.pi / 2, boundary=None),
@@ -133,7 +132,7 @@ priors['geocent_time'] = bilby.core.prior.DeltaFunction(
 # Ricky change: set time_marginalization to True
 likelihood = bilby.gw.GravitationalWaveTransient(
     interferometers=ifo_list, waveform_generator=waveform_generator,
-    time_marginalization=True, phase_marginalization=True,
+    time_marginalization=False, phase_marginalization=True,
     distance_marginalization=False, priors=priors
 )
 
@@ -143,6 +142,6 @@ logger.info("Calling dynesty...")
 # ricky change: you should consider what you want to do to the npool variable
 result = bilby.run_sampler(
     likelihood=likelihood, priors=priors, sampler='dynesty', dlogz=0.1,
-    walks=100, check_point_delta_t=20000, npool=24, outdir=outdir, label=label,
+    walks=100, check_point_delta_t=20000, npool=64, outdir=outdir, label=label,
     nlive=1000, n_effective=1000, injection_parameters=injection_parameters
 )
