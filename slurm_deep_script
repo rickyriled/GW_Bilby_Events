@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --time=48:00:00
+#SBATCH --ntasks=24 
+#SBATCH --nodes=1
+#SBATCH --mem-per-cpu=512M
+#SBATCH -J "bilby_BBH_run"
+#SBATCH --mail-user=wilder@montclair.edu
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+
+srun python inject-lambda0-sample-h0.py 

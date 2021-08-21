@@ -140,6 +140,6 @@ logger.info("Calling dynesty...")
 # ricky change: you should consider what you want to do to the npool variable
 result = bilby.run_sampler(
     likelihood=likelihood, priors=priors, sampler='dynesty', dlogz=0.1,
-    walks=100, check_point_delta_t=20000, npool=64, outdir=outdir, label=label,
+    walks=100, check_point_delta_t=20000, npool=24, outdir=outdir, label=label,
     nlive=1000, n_effective=1000, injection_parameters=injection_parameters
 )
