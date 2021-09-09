@@ -8,9 +8,9 @@ from gwpy.timeseries import TimeSeries
 import numpy as np
 
 
-outdir = 'bilby_slurm_run_1'
+outdir = 'bilby_3.0_-1.2'
 # outdir = '/scrah/users/deep1018/GW170817-dynesty/inject-lambda-0-sample-z-flatz-prior-run-2'
-label = 'bilby_slurm_1'
+label = 'bilby_slurm_3.0_-1.2'
 bilby.core.utils.setup_logger(outdir=outdir, label=label,
                               log_level='info')
 logger = bilby.core.utils.logger
@@ -137,6 +137,6 @@ logger.info("Calling dynesty...")
 # ricky change: you should consider what you want to do to the npool variable
 result = bilby.run_sampler(
     likelihood=likelihood, priors=priors, sampler='dynesty', dlogz=0.1,
-    walks=100, check_point_delta_t=20000, npool=24, outdir=outdir, label=label,
+    walks=100, check_point_delta_t=20000, npool=64, outdir=outdir, label=label,
     nlive=1000, n_effective=1000, injection_parameters=injection_parameters
 )
