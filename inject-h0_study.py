@@ -8,9 +8,9 @@ from gwpy.timeseries import TimeSeries
 import numpy as np
 
 
-outdir = 'bilby_3.2_-1.0'
+outdir = 'bilby_3.0_-1.5'
 # outdir = '/scrah/users/deep1018/GW170817-dynesty/inject-lambda-0-sample-z-flatz-prior-run-2'
-label = 'bilby_3.2_-1.0'
+label = 'bilby_3.0_-1.5'
 bilby.core.utils.setup_logger(outdir=outdir, label=label,
                               log_level='info')
 logger = bilby.core.utils.logger
@@ -108,8 +108,8 @@ prior_dictionary = dict(
     luminosity_distance=bilby.gw.prior.UniformComovingVolume(name='luminosity_distance',
                                                              minimum=10, maximum=1000, latex_label='$d_L$',
                                                              unit='Mpc', boundary=None),
-    dec=bilby.core.prior.DeltaFunction(peak=-1.0),
-    ra=bilby.core.prior.DeltaFunction(peak=3.2),
+    dec=bilby.core.prior.DeltaFunction(peak=-1.5),
+    ra=bilby.core.prior.DeltaFunction(peak=3.0),
     theta_jn=bilby.prior.Sine(name='theta_jn', latex_label='$\\theta_{JN}$',
                               unit=None, minimum=0, maximum=np.pi, boundary=None),
     psi=bilby.gw.prior.Uniform(name='psi', minimum=0, maximum=np.pi, boundary='periodic',
