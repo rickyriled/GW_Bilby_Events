@@ -8,9 +8,9 @@ from gwpy.timeseries import TimeSeries
 import numpy as np
 
 
-outdir = '/home/ricky/Deeps_script'
+outdir = 'bilby_3.0_-1.5'
 # outdir = '/scrah/users/deep1018/GW170817-dynesty/inject-lambda-0-sample-z-flatz-prior-run-2'
-label = 'inject-lambda-0-sample-z-flat-h0-prior-O5'
+label = 'bilby_3.0_-1.5'
 bilby.core.utils.setup_logger(outdir=outdir, label=label,
                               log_level='info')
 logger = bilby.core.utils.logger
@@ -19,26 +19,26 @@ roll_off = 0.4  # Roll off duration of tukey window in seconds
 
 # Injection parameters
 # Inject the following signal and sample on the redshift
-chirp_mass =  1.43
-mass_ratio = 0.833 
+chirp_mass =  1.3
+mass_ratio = 0.875 
 a_1 = 0.
 a_2 = 0.
 tilt_1 = 0.
 tilt_2 = 0.
 phi_12 = 0.
-luminosity_distance = 50
-theta_jn = 0.1
+luminosity_distance = 75
+theta_jn = 1.5
 phi_jl = 0.
-psi=2.659
-phase=1.3
+psi=0
+phase=1.0
 
 # These are two of the really important variables 
-ra = 5.445
-dec = 0.0
+ra = 3.0 
+dec = -1.2
 
-trigger_time = 1264069376 
+trigger_time = 1264079376 
 sampling_frequency = 4096
-duration = 320
+duration = 400
 start_time = trigger_time - duration
 
 injection_parameters = dict(
@@ -70,7 +70,6 @@ for det in ["H1", "L1", "V1"]:
     ifo = bilby.gw.detector.get_empty_interferometer(det)
     freq, asd = np.loadtxt(psd_filenames[det], unpack=True)
     psd = asd**2
-    logger.info(f"Setting PSD using GW170817 PSD for {det}")
     ifo.power_spectral_density = bilby.gw.detector.PowerSpectralDensity(
         frequency_array=freq, psd_array=psd
     )
@@ -93,10 +92,10 @@ ifo_list.plot_data(outdir=outdir, label=label)
 
 # create a GW170817 prior; sample in chirp_mass and mass_ratio
 prior_dictionary = dict(
-    chirp_mass=bilby.gw.prior.Uniform(name='chirp_mass', minimum=1.40, maximum=1.46),
+    chirp_mass=bilby.gw.prior.Uniform(name='chirp_mass', minimum=1.20, maximum=1.40),
     mass_ratio=bilby.gw.prior.Uniform(name='mass_ratio', minimum=0.65, maximum=1),
-    mass_1=bilby.gw.prior.Constraint(name='mass_1', minimum=1.3, maximum=2.1),
-    mass_2=bilby.gw.prior.Constraint(name='mass_2', minimum=1.1, maximum=1.9),
+    mass_1=bilby.gw.prior.Constraint(name='mass_1', minimum=1.1, maximum=2.1),
+    mass_2=bilby.gw.prior.Constraint(name='mass_2', minimum=1.1, maximum=2.1),
     a_1=bilby.gw.prior.Uniform(name='a_1', minimum=0, maximum=0.05,
                                latex_label='$a_1$', unit=None, boundary=None),
     a_2=bilby.gw.prior.Uniform(name='a_2', minimum=0, maximum=0.05,
@@ -107,12 +106,10 @@ prior_dictionary = dict(
     phi_jl=bilby.gw.prior.Uniform(name='phi_jl', minimum=0, maximum=2 * np.pi,
                                   boundary='periodic', latex_label='$\\phi_{JL}$', unit=None),
     luminosity_distance=bilby.gw.prior.UniformComovingVolume(name='luminosity_distance',
-                                                             minimum=10, maximum=150, latex_label='$d_L$',
+                                                             minimum=10, maximum=1000, latex_label='$d_L$',
                                                              unit='Mpc', boundary=None),
-    dec=bilby.prior.Cosine(name='dec', latex_label='$\\mathrm{DEC}$',
-                           unit=None, minimum=-np.pi / 2, maximum=np.pi / 2, boundary=None),
-    ra=bilby.gw.prior.Uniform(name='ra', minimum=0, maximum=2 * np.pi, boundary='periodic',
-                              latex_label='$\\mathrm{RA}$', unit=None),
+    dec=bilby.core.prior.DeltaFunction(peak=-1.5),
+    ra=bilby.core.prior.DeltaFunction(peak=3.0),
     theta_jn=bilby.prior.Sine(name='theta_jn', latex_label='$\\theta_{JN}$',
                               unit=None, minimum=0, maximum=np.pi, boundary=None),
     psi=bilby.gw.prior.Uniform(name='psi', minimum=0, maximum=np.pi, boundary='periodic',
