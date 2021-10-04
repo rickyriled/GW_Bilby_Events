@@ -1,0 +1,508 @@
+17:01 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_binary_neutron_star
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+17:01 INFO    : Setting PSD using GW170817 PSD for H1
+17:01 INFO    : Setting PSD using GW170817 PSD for L1
+17:01 INFO    : Setting PSD using GW170817 PSD for V1
+17:04 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_binary_neutron_star
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+17:04 INFO    : Setting PSD using GW170817 PSD for H1
+17:04 INFO    : Setting PSD using GW170817 PSD for L1
+17:04 INFO    : Setting PSD using GW170817 PSD for V1
+17:07 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_binary_neutron_star
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+17:07 INFO    : Setting PSD using GW170817 PSD for H1
+17:07 INFO    : Setting PSD using GW170817 PSD for L1
+17:07 INFO    : Setting PSD using GW170817 PSD for V1
+17:12 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_binary_black_hole
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+17:12 INFO    : Setting PSD using GW170817 PSD for H1
+17:12 INFO    : Setting PSD using GW170817 PSD for L1
+17:12 INFO    : Setting PSD using GW170817 PSD for V1
+17:12 INFO    : Injected signal in H1:
+17:12 INFO    :   optimal SNR = 51.31
+17:12 INFO    :   matched filter SNR = 53.35-1.67j
+17:12 INFO    :   chirp_mass = 1.43
+17:12 INFO    :   mass_ratio = 0.833
+17:12 INFO    :   a_1 = 0.0
+17:12 INFO    :   a_2 = 0.0
+17:12 INFO    :   tilt_1 = 0.0
+17:12 INFO    :   tilt_2 = 0.0
+17:12 INFO    :   theta_jn = 0.1
+17:12 INFO    :   luminosity_distance = 50
+17:12 INFO    :   phi_jl = 0.0
+17:12 INFO    :   psi = 2.659
+17:12 INFO    :   phase = 1.3
+17:12 INFO    :   geocent_time = 1264069376
+17:12 INFO    :   phi_12 = 0.0
+17:12 INFO    :   ra = 5.445
+17:12 INFO    :   dec = 0.0
+17:12 INFO    : Injected signal in L1:
+17:12 INFO    :   optimal SNR = 47.06
+17:12 INFO    :   matched filter SNR = 46.64-0.07j
+17:12 INFO    :   chirp_mass = 1.43
+17:12 INFO    :   mass_ratio = 0.833
+17:12 INFO    :   a_1 = 0.0
+17:12 INFO    :   a_2 = 0.0
+17:12 INFO    :   tilt_1 = 0.0
+17:12 INFO    :   tilt_2 = 0.0
+17:12 INFO    :   theta_jn = 0.1
+17:12 INFO    :   luminosity_distance = 50
+17:12 INFO    :   phi_jl = 0.0
+17:12 INFO    :   psi = 2.659
+17:12 INFO    :   phase = 1.3
+17:12 INFO    :   geocent_time = 1264069376
+17:12 INFO    :   phi_12 = 0.0
+17:12 INFO    :   ra = 5.445
+17:12 INFO    :   dec = 0.0
+17:12 INFO    : Injected signal in V1:
+17:12 INFO    :   optimal SNR = 33.66
+17:12 INFO    :   matched filter SNR = 33.25+0.31j
+17:12 INFO    :   chirp_mass = 1.43
+17:12 INFO    :   mass_ratio = 0.833
+17:12 INFO    :   a_1 = 0.0
+17:12 INFO    :   a_2 = 0.0
+17:12 INFO    :   tilt_1 = 0.0
+17:12 INFO    :   tilt_2 = 0.0
+17:12 INFO    :   theta_jn = 0.1
+17:12 INFO    :   luminosity_distance = 50
+17:12 INFO    :   phi_jl = 0.0
+17:12 INFO    :   psi = 2.659
+17:12 INFO    :   phase = 1.3
+17:12 INFO    :   geocent_time = 1264069376
+17:12 INFO    :   phi_12 = 0.0
+17:12 INFO    :   ra = 5.445
+17:12 INFO    :   dec = 0.0
+17:12 INFO    : Finished Injecting signal
+17:12 INFO    : Saving IFO data plots to /home/ricky/Deeps_script
+17:12 WARNING : Prior not provided for phase, using the BBH default.
+17:12 INFO    : No prior given, using default BBH priors in /home/ricky/miniconda3/envs/summer/lib/python3.8/site-packages/bilby/gw/prior_files/precessing_spins_bbh.prior.
+17:12 INFO    : Calling dynesty...
+17:12 INFO    : Running for label 'inject-lambda-0-sample-z-flat-h0-prior-O5', output will be saved to '/home/ricky/Deeps_script'
+17:12 INFO    : Using lal version 7.1.2
+17:12 INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+17:12 INFO    : Using lalsimulation version 2.5.1
+17:12 INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+17:12 INFO    : Search parameters:
+17:12 INFO    :   chirp_mass = Uniform(minimum=1.4, maximum=1.46, name='chirp_mass', latex_label='$\\mathcal{M}$', unit=None, boundary=None)
+17:12 INFO    :   mass_ratio = Uniform(minimum=0.65, maximum=1, name='mass_ratio', latex_label='$q$', unit=None, boundary=None)
+17:12 INFO    :   a_1 = Uniform(minimum=0, maximum=0.05, name='a_1', latex_label='$a_1$', unit=None, boundary=None)
+17:12 INFO    :   a_2 = Uniform(minimum=0, maximum=0.05, name='a_2', latex_label='$a_2$', unit=None, boundary=None)
+17:12 INFO    :   tilt_1 = Sine(minimum=0, maximum=3.141592653589793, name='tilt_1', latex_label='$\\theta_1$', unit=None, boundary=None)
+17:12 INFO    :   tilt_2 = Sine(minimum=0, maximum=3.141592653589793, name='tilt_2', latex_label='$\\theta_2$', unit=None, boundary=None)
+17:12 INFO    :   phi_12 = Uniform(minimum=0, maximum=6.283185307179586, name='phi_12', latex_label='$\\Delta\\phi$', unit=None, boundary='periodic')
+17:12 INFO    :   phi_jl = Uniform(minimum=0, maximum=6.283185307179586, name='phi_jl', latex_label='$\\phi_{JL}$', unit=None, boundary='periodic')
+17:12 INFO    :   luminosity_distance = UniformComovingVolume(minimum=10.0, maximum=150.0, cosmology=FlatLambdaCDM(name="Planck15", H0=67.7 km / (Mpc s), Om0=0.307, Tcmb0=2.725 K, Neff=3.05, m_nu=[0.   0.   0.06] eV, Ob0=0.0486), name='luminosity_distance', latex_label='$d_L$', unit=Unit("Mpc"), boundary=None)
+17:12 INFO    :   dec = Cosine(minimum=-1.5707963267948966, maximum=1.5707963267948966, name='dec', latex_label='$\\mathrm{DEC}$', unit=None, boundary=None)
+17:12 INFO    :   ra = Uniform(minimum=0, maximum=6.283185307179586, name='ra', latex_label='$\\mathrm{RA}$', unit=None, boundary='periodic')
+17:12 INFO    :   theta_jn = Sine(minimum=0, maximum=3.141592653589793, name='theta_jn', latex_label='$\\theta_{JN}$', unit=None, boundary=None)
+17:12 INFO    :   psi = Uniform(minimum=0, maximum=3.141592653589793, name='psi', latex_label='$\\psi$', unit=None, boundary='periodic')
+17:12 INFO    :   mass_1 = Constraint(minimum=1.3, maximum=2.1, name='mass_1', latex_label='$m_1$', unit=None)
+17:12 INFO    :   mass_2 = Constraint(minimum=1.1, maximum=1.9, name='mass_2', latex_label='$m_2$', unit=None)
+17:12 INFO    :   geocent_time = 1264069376
+17:12 INFO    :   phase = 0.0
+17:13 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_binary_black_hole
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+17:13 INFO    : Setting PSD using GW170817 PSD for H1
+17:13 INFO    : Setting PSD using GW170817 PSD for L1
+17:13 INFO    : Setting PSD using GW170817 PSD for V1
+17:13 INFO    : Injected signal in H1:
+17:13 INFO    :   optimal SNR = 51.31
+17:13 INFO    :   matched filter SNR = 51.60+0.73j
+17:13 INFO    :   chirp_mass = 1.43
+17:13 INFO    :   mass_ratio = 0.833
+17:13 INFO    :   a_1 = 0.0
+17:13 INFO    :   a_2 = 0.0
+17:13 INFO    :   tilt_1 = 0.0
+17:13 INFO    :   tilt_2 = 0.0
+17:13 INFO    :   theta_jn = 0.1
+17:13 INFO    :   luminosity_distance = 50
+17:13 INFO    :   phi_jl = 0.0
+17:13 INFO    :   psi = 2.659
+17:13 INFO    :   phase = 1.3
+17:13 INFO    :   geocent_time = 1264069376
+17:13 INFO    :   phi_12 = 0.0
+17:13 INFO    :   ra = 5.445
+17:13 INFO    :   dec = 0.0
+17:13 INFO    : Injected signal in L1:
+17:13 INFO    :   optimal SNR = 47.06
+17:13 INFO    :   matched filter SNR = 46.48-2.80j
+17:13 INFO    :   chirp_mass = 1.43
+17:13 INFO    :   mass_ratio = 0.833
+17:13 INFO    :   a_1 = 0.0
+17:13 INFO    :   a_2 = 0.0
+17:13 INFO    :   tilt_1 = 0.0
+17:13 INFO    :   tilt_2 = 0.0
+17:13 INFO    :   theta_jn = 0.1
+17:13 INFO    :   luminosity_distance = 50
+17:13 INFO    :   phi_jl = 0.0
+17:13 INFO    :   psi = 2.659
+17:13 INFO    :   phase = 1.3
+17:13 INFO    :   geocent_time = 1264069376
+17:13 INFO    :   phi_12 = 0.0
+17:13 INFO    :   ra = 5.445
+17:13 INFO    :   dec = 0.0
+17:13 INFO    : Injected signal in V1:
+17:13 INFO    :   optimal SNR = 33.66
+17:13 INFO    :   matched filter SNR = 33.38+0.22j
+17:13 INFO    :   chirp_mass = 1.43
+17:13 INFO    :   mass_ratio = 0.833
+17:13 INFO    :   a_1 = 0.0
+17:13 INFO    :   a_2 = 0.0
+17:13 INFO    :   tilt_1 = 0.0
+17:13 INFO    :   tilt_2 = 0.0
+17:13 INFO    :   theta_jn = 0.1
+17:13 INFO    :   luminosity_distance = 50
+17:13 INFO    :   phi_jl = 0.0
+17:13 INFO    :   psi = 2.659
+17:13 INFO    :   phase = 1.3
+17:13 INFO    :   geocent_time = 1264069376
+17:13 INFO    :   phi_12 = 0.0
+17:13 INFO    :   ra = 5.445
+17:13 INFO    :   dec = 0.0
+17:13 INFO    : Finished Injecting signal
+17:13 INFO    : Saving IFO data plots to /home/ricky/Deeps_script
+17:13 WARNING : Prior not provided for phase, using the BBH default.
+17:13 INFO    : No prior given, using default BBH priors in /home/ricky/miniconda3/envs/summer/lib/python3.8/site-packages/bilby/gw/prior_files/precessing_spins_bbh.prior.
+17:13 INFO    : Calling dynesty...
+17:13 INFO    : Running for label 'inject-lambda-0-sample-z-flat-h0-prior-O5', output will be saved to '/home/ricky/Deeps_script'
+17:13 INFO    : Using lal version 7.1.2
+17:13 INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+17:13 INFO    : Using lalsimulation version 2.5.1
+17:13 INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+17:13 INFO    : Search parameters:
+17:13 INFO    :   chirp_mass = Uniform(minimum=1.4, maximum=1.46, name='chirp_mass', latex_label='$\\mathcal{M}$', unit=None, boundary=None)
+17:13 INFO    :   mass_ratio = Uniform(minimum=0.65, maximum=1, name='mass_ratio', latex_label='$q$', unit=None, boundary=None)
+17:13 INFO    :   a_1 = Uniform(minimum=0, maximum=0.05, name='a_1', latex_label='$a_1$', unit=None, boundary=None)
+17:13 INFO    :   a_2 = Uniform(minimum=0, maximum=0.05, name='a_2', latex_label='$a_2$', unit=None, boundary=None)
+17:13 INFO    :   tilt_1 = Sine(minimum=0, maximum=3.141592653589793, name='tilt_1', latex_label='$\\theta_1$', unit=None, boundary=None)
+17:13 INFO    :   tilt_2 = Sine(minimum=0, maximum=3.141592653589793, name='tilt_2', latex_label='$\\theta_2$', unit=None, boundary=None)
+17:13 INFO    :   phi_12 = Uniform(minimum=0, maximum=6.283185307179586, name='phi_12', latex_label='$\\Delta\\phi$', unit=None, boundary='periodic')
+17:13 INFO    :   phi_jl = Uniform(minimum=0, maximum=6.283185307179586, name='phi_jl', latex_label='$\\phi_{JL}$', unit=None, boundary='periodic')
+17:13 INFO    :   luminosity_distance = UniformComovingVolume(minimum=10.0, maximum=150.0, cosmology=FlatLambdaCDM(name="Planck15", H0=67.7 km / (Mpc s), Om0=0.307, Tcmb0=2.725 K, Neff=3.05, m_nu=[0.   0.   0.06] eV, Ob0=0.0486), name='luminosity_distance', latex_label='$d_L$', unit=Unit("Mpc"), boundary=None)
+17:13 INFO    :   dec = Cosine(minimum=-1.5707963267948966, maximum=1.5707963267948966, name='dec', latex_label='$\\mathrm{DEC}$', unit=None, boundary=None)
+17:13 INFO    :   ra = Uniform(minimum=0, maximum=6.283185307179586, name='ra', latex_label='$\\mathrm{RA}$', unit=None, boundary='periodic')
+17:13 INFO    :   theta_jn = Sine(minimum=0, maximum=3.141592653589793, name='theta_jn', latex_label='$\\theta_{JN}$', unit=None, boundary=None)
+17:13 INFO    :   psi = Uniform(minimum=0, maximum=3.141592653589793, name='psi', latex_label='$\\psi$', unit=None, boundary='periodic')
+17:13 INFO    :   mass_1 = Constraint(minimum=1.3, maximum=2.1, name='mass_1', latex_label='$m_1$', unit=None)
+17:13 INFO    :   mass_2 = Constraint(minimum=1.1, maximum=1.9, name='mass_2', latex_label='$m_2$', unit=None)
+17:13 INFO    :   geocent_time = 1264069376
+17:13 INFO    :   phase = 0.0
+17:23 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_binary_black_hole
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+17:23 INFO    : Setting PSD using GW170817 PSD for H1
+17:23 INFO    : Setting PSD using GW170817 PSD for L1
+17:23 INFO    : Setting PSD using GW170817 PSD for V1
+17:23 INFO    : Injected signal in H1:
+17:23 INFO    :   optimal SNR = 51.31
+17:23 INFO    :   matched filter SNR = 49.85+0.50j
+17:23 INFO    :   chirp_mass = 1.43
+17:23 INFO    :   mass_ratio = 0.833
+17:23 INFO    :   a_1 = 0.0
+17:23 INFO    :   a_2 = 0.0
+17:23 INFO    :   tilt_1 = 0.0
+17:23 INFO    :   tilt_2 = 0.0
+17:23 INFO    :   theta_jn = 0.1
+17:23 INFO    :   luminosity_distance = 50
+17:23 INFO    :   phi_jl = 0.0
+17:23 INFO    :   psi = 2.659
+17:23 INFO    :   phase = 1.3
+17:23 INFO    :   geocent_time = 1264069376
+17:23 INFO    :   phi_12 = 0.0
+17:23 INFO    :   ra = 5.445
+17:23 INFO    :   dec = 0.0
+17:23 INFO    : Injected signal in L1:
+17:23 INFO    :   optimal SNR = 47.06
+17:23 INFO    :   matched filter SNR = 48.10+0.99j
+17:23 INFO    :   chirp_mass = 1.43
+17:23 INFO    :   mass_ratio = 0.833
+17:23 INFO    :   a_1 = 0.0
+17:23 INFO    :   a_2 = 0.0
+17:23 INFO    :   tilt_1 = 0.0
+17:23 INFO    :   tilt_2 = 0.0
+17:23 INFO    :   theta_jn = 0.1
+17:23 INFO    :   luminosity_distance = 50
+17:23 INFO    :   phi_jl = 0.0
+17:23 INFO    :   psi = 2.659
+17:23 INFO    :   phase = 1.3
+17:23 INFO    :   geocent_time = 1264069376
+17:23 INFO    :   phi_12 = 0.0
+17:23 INFO    :   ra = 5.445
+17:23 INFO    :   dec = 0.0
+17:23 INFO    : Injected signal in V1:
+17:23 INFO    :   optimal SNR = 33.66
+17:23 INFO    :   matched filter SNR = 36.16-1.31j
+17:23 INFO    :   chirp_mass = 1.43
+17:23 INFO    :   mass_ratio = 0.833
+17:23 INFO    :   a_1 = 0.0
+17:23 INFO    :   a_2 = 0.0
+17:23 INFO    :   tilt_1 = 0.0
+17:23 INFO    :   tilt_2 = 0.0
+17:23 INFO    :   theta_jn = 0.1
+17:23 INFO    :   luminosity_distance = 50
+17:23 INFO    :   phi_jl = 0.0
+17:23 INFO    :   psi = 2.659
+17:23 INFO    :   phase = 1.3
+17:23 INFO    :   geocent_time = 1264069376
+17:23 INFO    :   phi_12 = 0.0
+17:23 INFO    :   ra = 5.445
+17:23 INFO    :   dec = 0.0
+17:23 INFO    : Finished Injecting signal
+17:23 INFO    : Saving IFO data plots to /home/ricky/Deeps_script
+17:26 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_binary_black_hole
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+17:26 INFO    : Setting PSD using GW170817 PSD for H1
+17:26 INFO    : Setting PSD using GW170817 PSD for L1
+17:26 INFO    : Setting PSD using GW170817 PSD for V1
+17:26 INFO    : Injected signal in H1:
+17:26 INFO    :   optimal SNR = 51.31
+17:26 INFO    :   matched filter SNR = 51.10-1.76j
+17:26 INFO    :   chirp_mass = 1.43
+17:26 INFO    :   mass_ratio = 0.833
+17:26 INFO    :   a_1 = 0.0
+17:26 INFO    :   a_2 = 0.0
+17:26 INFO    :   tilt_1 = 0.0
+17:26 INFO    :   tilt_2 = 0.0
+17:26 INFO    :   theta_jn = 0.1
+17:26 INFO    :   luminosity_distance = 50
+17:26 INFO    :   phi_jl = 0.0
+17:26 INFO    :   psi = 2.659
+17:26 INFO    :   phase = 1.3
+17:26 INFO    :   geocent_time = 1264069376
+17:26 INFO    :   phi_12 = 0.0
+17:26 INFO    :   ra = 5.445
+17:26 INFO    :   dec = 0.0
+17:26 INFO    : Injected signal in L1:
+17:26 INFO    :   optimal SNR = 47.06
+17:26 INFO    :   matched filter SNR = 47.47+0.66j
+17:26 INFO    :   chirp_mass = 1.43
+17:26 INFO    :   mass_ratio = 0.833
+17:26 INFO    :   a_1 = 0.0
+17:26 INFO    :   a_2 = 0.0
+17:26 INFO    :   tilt_1 = 0.0
+17:26 INFO    :   tilt_2 = 0.0
+17:26 INFO    :   theta_jn = 0.1
+17:26 INFO    :   luminosity_distance = 50
+17:26 INFO    :   phi_jl = 0.0
+17:26 INFO    :   psi = 2.659
+17:26 INFO    :   phase = 1.3
+17:26 INFO    :   geocent_time = 1264069376
+17:26 INFO    :   phi_12 = 0.0
+17:26 INFO    :   ra = 5.445
+17:26 INFO    :   dec = 0.0
+17:26 INFO    : Injected signal in V1:
+17:26 INFO    :   optimal SNR = 33.66
+17:26 INFO    :   matched filter SNR = 33.41+0.17j
+17:26 INFO    :   chirp_mass = 1.43
+17:26 INFO    :   mass_ratio = 0.833
+17:26 INFO    :   a_1 = 0.0
+17:26 INFO    :   a_2 = 0.0
+17:26 INFO    :   tilt_1 = 0.0
+17:26 INFO    :   tilt_2 = 0.0
+17:26 INFO    :   theta_jn = 0.1
+17:26 INFO    :   luminosity_distance = 50
+17:26 INFO    :   phi_jl = 0.0
+17:26 INFO    :   psi = 2.659
+17:26 INFO    :   phase = 1.3
+17:26 INFO    :   geocent_time = 1264069376
+17:26 INFO    :   phi_12 = 0.0
+17:26 INFO    :   ra = 5.445
+17:26 INFO    :   dec = 0.0
+17:26 INFO    : Finished Injecting signal
+17:26 INFO    : Saving IFO data plots to /home/ricky/Deeps_script
+17:26 WARNING : Prior not provided for phase, using the BBH default.
+17:26 INFO    : No prior given, using default BBH priors in /home/ricky/miniconda3/envs/summer/lib/python3.8/site-packages/bilby/gw/prior_files/precessing_spins_bbh.prior.
+17:26 INFO    : Calling dynesty...
+17:26 INFO    : Running for label 'inject-lambda-0-sample-z-flat-h0-prior-O5', output will be saved to '/home/ricky/Deeps_script'
+17:26 INFO    : Using lal version 7.1.2
+17:26 INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+17:26 INFO    : Using lalsimulation version 2.5.1
+17:26 INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+17:26 INFO    : Search parameters:
+17:26 INFO    :   chirp_mass = Uniform(minimum=1.4, maximum=1.46, name='chirp_mass', latex_label='$\\mathcal{M}$', unit=None, boundary=None)
+17:26 INFO    :   mass_ratio = Uniform(minimum=0.65, maximum=1, name='mass_ratio', latex_label='$q$', unit=None, boundary=None)
+17:26 INFO    :   a_1 = Uniform(minimum=0, maximum=0.05, name='a_1', latex_label='$a_1$', unit=None, boundary=None)
+17:26 INFO    :   a_2 = Uniform(minimum=0, maximum=0.05, name='a_2', latex_label='$a_2$', unit=None, boundary=None)
+17:26 INFO    :   luminosity_distance = UniformComovingVolume(minimum=10.0, maximum=150.0, cosmology=FlatLambdaCDM(name="Planck15", H0=67.7 km / (Mpc s), Om0=0.307, Tcmb0=2.725 K, Neff=3.05, m_nu=[0.   0.   0.06] eV, Ob0=0.0486), name='luminosity_distance', latex_label='$d_L$', unit=Unit("Mpc"), boundary=None)
+17:26 INFO    :   dec = Cosine(minimum=-1.5707963267948966, maximum=1.5707963267948966, name='dec', latex_label='$\\mathrm{DEC}$', unit=None, boundary=None)
+17:26 INFO    :   ra = Uniform(minimum=0, maximum=6.283185307179586, name='ra', latex_label='$\\mathrm{RA}$', unit=None, boundary='periodic')
+17:26 INFO    :   theta_jn = Sine(minimum=0, maximum=3.141592653589793, name='theta_jn', latex_label='$\\theta_{JN}$', unit=None, boundary=None)
+17:26 INFO    :   psi = Uniform(minimum=0, maximum=3.141592653589793, name='psi', latex_label='$\\psi$', unit=None, boundary='periodic')
+17:26 INFO    :   mass_1 = Constraint(minimum=1.3, maximum=2.1, name='mass_1', latex_label='$m_1$', unit=None)
+17:26 INFO    :   mass_2 = Constraint(minimum=1.1, maximum=1.9, name='mass_2', latex_label='$m_2$', unit=None)
+17:26 INFO    :   geocent_time = 1264069376
+17:26 INFO    :   phase = 0.0
+17:27 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_binary_black_hole
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+17:27 INFO    : Setting PSD using GW170817 PSD for H1
+17:27 INFO    : Setting PSD using GW170817 PSD for L1
+17:27 INFO    : Setting PSD using GW170817 PSD for V1
+17:28 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_binary_black_hole
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+17:28 INFO    : Setting PSD using GW170817 PSD for H1
+17:28 INFO    : Setting PSD using GW170817 PSD for L1
+17:28 INFO    : Setting PSD using GW170817 PSD for V1
+17:28 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_binary_black_hole
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+17:28 INFO    : Setting PSD using GW170817 PSD for H1
+17:28 INFO    : Setting PSD using GW170817 PSD for L1
+17:28 INFO    : Setting PSD using GW170817 PSD for V1
+17:33 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_binary_black_hole
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+17:33 INFO    : Setting PSD using GW170817 PSD for H1
+17:33 INFO    : Setting PSD using GW170817 PSD for L1
+17:33 INFO    : Setting PSD using GW170817 PSD for V1
+17:33 INFO    : Injected signal in H1:
+17:33 INFO    :   optimal SNR = 51.31
+17:33 INFO    :   matched filter SNR = 48.94-0.12j
+17:33 INFO    :   chirp_mass = 1.43
+17:33 INFO    :   mass_ratio = 0.833
+17:33 INFO    :   a_1 = 0.0
+17:33 INFO    :   a_2 = 0.0
+17:33 INFO    :   tilt_1 = 0.0
+17:33 INFO    :   tilt_2 = 0.0
+17:33 INFO    :   theta_jn = 0.1
+17:33 INFO    :   luminosity_distance = 50
+17:33 INFO    :   phi_jl = 0.0
+17:33 INFO    :   psi = 2.659
+17:33 INFO    :   phase = 1.3
+17:33 INFO    :   geocent_time = 1264069376
+17:33 INFO    :   phi_12 = 0.0
+17:33 INFO    :   ra = 5.445
+17:33 INFO    :   dec = 0.0
+17:33 INFO    : Injected signal in L1:
+17:33 INFO    :   optimal SNR = 47.06
+17:33 INFO    :   matched filter SNR = 46.47+1.32j
+17:33 INFO    :   chirp_mass = 1.43
+17:33 INFO    :   mass_ratio = 0.833
+17:33 INFO    :   a_1 = 0.0
+17:33 INFO    :   a_2 = 0.0
+17:33 INFO    :   tilt_1 = 0.0
+17:33 INFO    :   tilt_2 = 0.0
+17:33 INFO    :   theta_jn = 0.1
+17:33 INFO    :   luminosity_distance = 50
+17:33 INFO    :   phi_jl = 0.0
+17:33 INFO    :   psi = 2.659
+17:33 INFO    :   phase = 1.3
+17:33 INFO    :   geocent_time = 1264069376
+17:33 INFO    :   phi_12 = 0.0
+17:33 INFO    :   ra = 5.445
+17:33 INFO    :   dec = 0.0
+17:33 INFO    : Injected signal in V1:
+17:33 INFO    :   optimal SNR = 33.66
+17:33 INFO    :   matched filter SNR = 33.82+0.21j
+17:33 INFO    :   chirp_mass = 1.43
+17:33 INFO    :   mass_ratio = 0.833
+17:33 INFO    :   a_1 = 0.0
+17:33 INFO    :   a_2 = 0.0
+17:33 INFO    :   tilt_1 = 0.0
+17:33 INFO    :   tilt_2 = 0.0
+17:33 INFO    :   theta_jn = 0.1
+17:33 INFO    :   luminosity_distance = 50
+17:33 INFO    :   phi_jl = 0.0
+17:33 INFO    :   psi = 2.659
+17:33 INFO    :   phase = 1.3
+17:33 INFO    :   geocent_time = 1264069376
+17:33 INFO    :   phi_12 = 0.0
+17:33 INFO    :   ra = 5.445
+17:33 INFO    :   dec = 0.0
+17:33 INFO    : Finished Injecting signal
+17:33 INFO    : Saving IFO data plots to /home/ricky/Deeps_script
+17:33 WARNING : Prior not provided for phase, using the BBH default.
+17:33 INFO    : No prior given, using default BBH priors in /home/ricky/miniconda3/envs/summer/lib/python3.8/site-packages/bilby/gw/prior_files/precessing_spins_bbh.prior.
+17:33 INFO    : Calling dynesty...
+17:33 INFO    : Running for label 'inject-lambda-0-sample-z-flat-h0-prior-O5', output will be saved to '/home/ricky/Deeps_script'
+17:33 INFO    : Using lal version 7.1.2
+17:33 INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+17:33 INFO    : Using lalsimulation version 2.5.1
+17:33 INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+17:33 INFO    : Search parameters:
+17:33 INFO    :   chirp_mass = Uniform(minimum=1.4, maximum=1.46, name='chirp_mass', latex_label='$\\mathcal{M}$', unit=None, boundary=None)
+17:33 INFO    :   mass_ratio = Uniform(minimum=0.65, maximum=1, name='mass_ratio', latex_label='$q$', unit=None, boundary=None)
+17:33 INFO    :   a_1 = Uniform(minimum=0, maximum=0.05, name='a_1', latex_label='$a_1$', unit=None, boundary=None)
+17:33 INFO    :   a_2 = Uniform(minimum=0, maximum=0.05, name='a_2', latex_label='$a_2$', unit=None, boundary=None)
+17:33 INFO    :   phi_jl = Uniform(minimum=0, maximum=6.283185307179586, name='phi_jl', latex_label='$\\phi_{JL}$', unit=None, boundary='periodic')
+17:33 INFO    :   luminosity_distance = UniformComovingVolume(minimum=10.0, maximum=150.0, cosmology=FlatLambdaCDM(name="Planck15", H0=67.7 km / (Mpc s), Om0=0.307, Tcmb0=2.725 K, Neff=3.05, m_nu=[0.   0.   0.06] eV, Ob0=0.0486), name='luminosity_distance', latex_label='$d_L$', unit=Unit("Mpc"), boundary=None)
+17:33 INFO    :   dec = Cosine(minimum=-1.5707963267948966, maximum=1.5707963267948966, name='dec', latex_label='$\\mathrm{DEC}$', unit=None, boundary=None)
+17:33 INFO    :   ra = Uniform(minimum=0, maximum=6.283185307179586, name='ra', latex_label='$\\mathrm{RA}$', unit=None, boundary='periodic')
+17:33 INFO    :   theta_jn = Sine(minimum=0, maximum=3.141592653589793, name='theta_jn', latex_label='$\\theta_{JN}$', unit=None, boundary=None)
+17:33 INFO    :   psi = Uniform(minimum=0, maximum=3.141592653589793, name='psi', latex_label='$\\psi$', unit=None, boundary='periodic')
+17:33 INFO    :   mass_1 = Constraint(minimum=1.3, maximum=2.1, name='mass_1', latex_label='$m_1$', unit=None)
+17:33 INFO    :   mass_2 = Constraint(minimum=1.1, maximum=1.9, name='mass_2', latex_label='$m_2$', unit=None)
+17:33 INFO    :   tilt_1 = 0.0
+17:33 INFO    :   tilt_2 = 0.0
+17:33 INFO    :   phi_12 = 0.0
+17:33 INFO    :   geocent_time = 1264069376
+17:33 INFO    :   phase = 0.0
+17:33 INFO    : Single likelihood evaluation took 2.592e-01 s
+17:33 INFO    : Using sampler Dynesty with kwargs {'bound': 'multi', 'sample': 'rwalk', 'verbose': True, 'periodic': None, 'reflective': None, 'check_point_delta_t': 1800, 'nlive': 1000, 'first_update': None, 'walks': 100, 'npdim': None, 'rstate': None, 'queue_size': 64, 'pool': None, 'use_pool': None, 'live_points': None, 'logl_args': None, 'logl_kwargs': None, 'ptform_args': None, 'ptform_kwargs': None, 'enlarge': 1.5, 'bootstrap': None, 'vol_dec': 0.5, 'vol_check': 8.0, 'facc': 0.2, 'slices': 5, 'update_interval': 600, 'print_func': <bound method Dynesty._print_func of <bilby.core.sampler.dynesty.Dynesty object at 0x7faee751c520>>, 'dlogz': 0.1, 'maxiter': None, 'maxcall': None, 'logl_max': inf, 'add_live': True, 'print_progress': True, 'save_bounds': False, 'n_effective': 1000, 'maxmcmc': 5000, 'nact': 5}
+17:33 INFO    : Checkpoint every check_point_delta_t = 20000s
+17:33 INFO    : Using dynesty version 1.1
+17:33 INFO    : Using the bilby-implemented rwalk sample method with ACT estimated walks
+17:33 INFO    : Setting up multiproccesing pool with 64 processes.
+17:33 INFO    : Resume file /home/ricky/Deeps_script/inject-lambda-0-sample-z-flat-h0-prior-O5_resume.pickle does not exist.
+17:33 INFO    : Generating initial points from the prior
+23:14 INFO    : Written checkpoint file /home/ricky/Deeps_script/inject-lambda-0-sample-z-flat-h0-prior-O5_resume.pickle
+23:14 WARNING : Axis limits cannot be NaN or Inf
+23:14 WARNING : Failed to create dynesty run plot at checkpoint
+04:49 INFO    : Written checkpoint file /home/ricky/Deeps_script/inject-lambda-0-sample-z-flat-h0-prior-O5_resume.pickle
+04:49 WARNING : singular matrix
+04:49 WARNING : Failed to create dynesty state plot at checkpoint
+04:49 WARNING : singular matrix
+04:49 WARNING : Failed to create dynesty unit state plot at checkpoint
+04:49 WARNING : singular matrix
+04:49 WARNING : Failed to create dynesty run plot at checkpoint
+10:22 INFO    : Written checkpoint file /home/ricky/Deeps_script/inject-lambda-0-sample-z-flat-h0-prior-O5_resume.pickle
+10:22 WARNING : Axis limits cannot be NaN or Inf
+10:22 WARNING : Failed to create dynesty run plot at checkpoint
+15:58 INFO    : Written checkpoint file /home/ricky/Deeps_script/inject-lambda-0-sample-z-flat-h0-prior-O5_resume.pickle
+15:58 WARNING : Axis limits cannot be NaN or Inf
+15:58 WARNING : Failed to create dynesty run plot at checkpoint
+21:37 INFO    : Written checkpoint file /home/ricky/Deeps_script/inject-lambda-0-sample-z-flat-h0-prior-O5_resume.pickle
+21:37 WARNING : Axis limits cannot be NaN or Inf
+21:37 WARNING : Failed to create dynesty run plot at checkpoint
+03:11 INFO    : Written checkpoint file /home/ricky/Deeps_script/inject-lambda-0-sample-z-flat-h0-prior-O5_resume.pickle
+03:11 WARNING : Axis limits cannot be NaN or Inf
+03:11 WARNING : Failed to create dynesty run plot at checkpoint
+08:47 INFO    : Written checkpoint file /home/ricky/Deeps_script/inject-lambda-0-sample-z-flat-h0-prior-O5_resume.pickle
+08:47 INFO    : Writing 334 current samples to /home/ricky/Deeps_script/inject-lambda-0-sample-z-flat-h0-prior-O5_samples.dat
+08:47 WARNING : Axis limits cannot be NaN or Inf
+08:47 WARNING : Failed to create dynesty run plot at checkpoint
+14:21 INFO    : Written checkpoint file /home/ricky/Deeps_script/inject-lambda-0-sample-z-flat-h0-prior-O5_resume.pickle
+14:21 INFO    : Writing 2673 current samples to /home/ricky/Deeps_script/inject-lambda-0-sample-z-flat-h0-prior-O5_samples.dat
+14:21 WARNING : Axis limits cannot be NaN or Inf
+14:21 WARNING : Failed to create dynesty run plot at checkpoint
+18:41 INFO    : Written checkpoint file /home/ricky/Deeps_script/inject-lambda-0-sample-z-flat-h0-prior-O5_resume.pickle
+18:41 INFO    : Writing 4429 current samples to /home/ricky/Deeps_script/inject-lambda-0-sample-z-flat-h0-prior-O5_samples.dat
+18:41 WARNING : Axis limits cannot be NaN or Inf
+18:41 WARNING : Failed to create dynesty run plot at checkpoint
+18:41 INFO    : Starting to close worker pool.
+18:41 INFO    : Finished closing worker pool.
+18:41 INFO    : Sampling time: 2 days, 1:00:50.743571
+18:41 INFO    : Summary of results:
+nsamples: 38091
+ln_noise_evidence: -1950439.365
+ln_evidence: -1947629.379 +/-  0.252
+ln_bayes_factor: 2809.986 +/-  0.252
+
