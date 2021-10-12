@@ -8,9 +8,9 @@ from gwpy.timeseries import TimeSeries
 import numpy as np
 
 
-outdir = 'bilby_3.1_-0.9'
+outdir = 'broad_prior'
 # outdir = '/scrah/users/deep1018/GW170817-dynesty/inject-lambda-0-sample-z-flatz-prior-run-2'
-label = 'bilby_3.1_-0.9'
+label = 'bilby_broad_prior'
 bilby.core.utils.setup_logger(outdir=outdir, label=label,
                               log_level='info')
 logger = bilby.core.utils.logger
@@ -36,7 +36,7 @@ phase=1.0
 ra = 3.0 
 dec = -1.2
 
-trigger_time = 1264079376 
+trigger_time = 1264079376
 sampling_frequency = 4096
 duration = 400
 start_time = trigger_time - duration
@@ -92,10 +92,10 @@ ifo_list.plot_data(outdir=outdir, label=label)
 
 # create a GW170817 prior; sample in chirp_mass and mass_ratio
 prior_dictionary = dict(
-    chirp_mass=bilby.gw.prior.Uniform(name='chirp_mass', minimum=1.20, maximum=1.40),
-    mass_ratio=bilby.gw.prior.Uniform(name='mass_ratio', minimum=0.65, maximum=1),
-    mass_1=bilby.gw.prior.Constraint(name='mass_1', minimum=1.1, maximum=2.1),
-    mass_2=bilby.gw.prior.Constraint(name='mass_2', minimum=1.1, maximum=2.1),
+    chirp_mass=bilby.gw.prior.Uniform(name='chirp_mass', minimum=1, maximum=1.75),
+    mass_ratio=bilby.gw.prior.Uniform(name='mass_ratio', minimum=0.1, maximum=1),
+    mass_1=bilby.gw.prior.Constraint(name='mass_1', minimum=1, maximum=2.4),
+    mass_2=bilby.gw.prior.Constraint(name='mass_2', minimum=1, maximum=2.4),
     a_1=bilby.gw.prior.Uniform(name='a_1', minimum=0, maximum=0.05,
                                latex_label='$a_1$', unit=None, boundary=None),
     a_2=bilby.gw.prior.Uniform(name='a_2', minimum=0, maximum=0.05,
@@ -106,10 +106,10 @@ prior_dictionary = dict(
     phi_jl=bilby.gw.prior.Uniform(name='phi_jl', minimum=0, maximum=2 * np.pi,
                                   boundary='periodic', latex_label='$\\phi_{JL}$', unit=None),
     luminosity_distance=bilby.gw.prior.UniformComovingVolume(name='luminosity_distance',
-                                                             minimum=10, maximum=1000, latex_label='$d_L$',
+                                                             minimum=10, maximum=1200, latex_label='$d_L$',
                                                              unit='Mpc', boundary=None),
-    dec=bilby.core.prior.DeltaFunction(peak=-0.9),
-    ra=bilby.core.prior.DeltaFunction(peak=3.1),
+    dec=bilby.core.prior.DeltaFunction(peak=-1.2),
+    ra=bilby.core.prior.DeltaFunction(peak=3.0),
     theta_jn=bilby.prior.Sine(name='theta_jn', latex_label='$\\theta_{JN}$',
                               unit=None, minimum=0, maximum=np.pi, boundary=None),
     psi=bilby.gw.prior.Uniform(name='psi', minimum=0, maximum=np.pi, boundary='periodic',
@@ -118,7 +118,6 @@ prior_dictionary = dict(
 
 priors = bilby.gw.prior.BBHPriorDict(dictionary=prior_dictionary)
 
-# set a small margin on time of arrival 
 priors['geocent_time'] = bilby.core.prior.DeltaFunction(
     peak=trigger_time
 )
