@@ -1,0 +1,110 @@
+13:29 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_binary_black_hole
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+13:29 INFO    : Injected signal in H1:
+13:29 INFO    :   optimal SNR = 3.08
+13:29 INFO    :   matched filter SNR = 2.81-0.95j
+13:29 INFO    :   chirp_mass = 1.174
+13:29 INFO    :   mass_ratio = 0.674
+13:29 INFO    :   a_1 = 0.0
+13:29 INFO    :   a_2 = 0.0
+13:29 INFO    :   tilt_1 = 0.0
+13:29 INFO    :   tilt_2 = 0.0
+13:29 INFO    :   theta_jn = 1.5
+13:29 INFO    :   luminosity_distance = 100
+13:29 INFO    :   phi_jl = 0.0
+13:29 INFO    :   psi = 0
+13:29 INFO    :   phase = 1.0
+13:29 INFO    :   geocent_time = 1264079376
+13:29 INFO    :   phi_12 = 0.0
+13:29 INFO    :   ra = 4.85
+13:29 INFO    :   dec = 0.0
+13:29 INFO    : Injected signal in L1:
+13:29 INFO    :   optimal SNR = 9.88
+13:29 INFO    :   matched filter SNR = 9.75-0.15j
+13:29 INFO    :   chirp_mass = 1.174
+13:29 INFO    :   mass_ratio = 0.674
+13:29 INFO    :   a_1 = 0.0
+13:29 INFO    :   a_2 = 0.0
+13:29 INFO    :   tilt_1 = 0.0
+13:29 INFO    :   tilt_2 = 0.0
+13:29 INFO    :   theta_jn = 1.5
+13:29 INFO    :   luminosity_distance = 100
+13:29 INFO    :   phi_jl = 0.0
+13:29 INFO    :   psi = 0
+13:29 INFO    :   phase = 1.0
+13:29 INFO    :   geocent_time = 1264079376
+13:29 INFO    :   phi_12 = 0.0
+13:29 INFO    :   ra = 4.85
+13:29 INFO    :   dec = 0.0
+13:29 INFO    : Injected signal in V1:
+13:29 INFO    :   optimal SNR = 4.34
+13:29 INFO    :   matched filter SNR = 5.40-0.54j
+13:29 INFO    :   chirp_mass = 1.174
+13:29 INFO    :   mass_ratio = 0.674
+13:29 INFO    :   a_1 = 0.0
+13:29 INFO    :   a_2 = 0.0
+13:29 INFO    :   tilt_1 = 0.0
+13:29 INFO    :   tilt_2 = 0.0
+13:29 INFO    :   theta_jn = 1.5
+13:29 INFO    :   luminosity_distance = 100
+13:29 INFO    :   phi_jl = 0.0
+13:29 INFO    :   psi = 0
+13:29 INFO    :   phase = 1.0
+13:29 INFO    :   geocent_time = 1264079376
+13:29 INFO    :   phi_12 = 0.0
+13:29 INFO    :   ra = 4.85
+13:29 INFO    :   dec = 0.0
+13:29 INFO    : Finished Injecting signal
+13:29 INFO    : Saving IFO data plots to bilby_4.85_0.0_followup
+13:29 WARNING : Prior not provided for phase, using the BBH default.
+13:29 INFO    : No prior given, using default BBH priors in /home/ricky/miniconda3/envs/summer/lib/python3.8/site-packages/bilby/gw/prior_files/precessing_spins_bbh.prior.
+13:29 INFO    : Calling dynesty...
+13:29 INFO    : Running for label 'bilby_4.85_0.0_followup', output will be saved to 'bilby_4.85_0.0_followup'
+13:29 INFO    : Using lal version 7.1.2
+13:29 INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+13:29 INFO    : Using lalsimulation version 2.5.1
+13:29 INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+13:29 INFO    : Search parameters:
+13:29 INFO    :   chirp_mass = Uniform(minimum=1.1, maximum=1.25, name='chirp_mass', latex_label='$\\mathcal{M}$', unit=None, boundary=None)
+13:29 INFO    :   mass_ratio = Uniform(minimum=0.25, maximum=1, name='mass_ratio', latex_label='$q$', unit=None, boundary=None)
+13:29 INFO    :   a_1 = Uniform(minimum=0, maximum=0.05, name='a_1', latex_label='$a_1$', unit=None, boundary=None)
+13:29 INFO    :   a_2 = Uniform(minimum=0, maximum=0.05, name='a_2', latex_label='$a_2$', unit=None, boundary=None)
+13:29 INFO    :   phi_jl = Uniform(minimum=0, maximum=6.283185307179586, name='phi_jl', latex_label='$\\phi_{JL}$', unit=None, boundary='periodic')
+13:29 INFO    :   luminosity_distance = UniformComovingVolume(minimum=10.0, maximum=500.0, cosmology=FlatLambdaCDM(name="Planck15", H0=67.7 km / (Mpc s), Om0=0.307, Tcmb0=2.725 K, Neff=3.05, m_nu=[0.   0.   0.06] eV, Ob0=0.0486), name='luminosity_distance', latex_label='$d_L$', unit=Unit("Mpc"), boundary=None)
+13:29 INFO    :   theta_jn = Sine(minimum=0, maximum=3.141592653589793, name='theta_jn', latex_label='$\\theta_{JN}$', unit=None, boundary=None)
+13:29 INFO    :   psi = Uniform(minimum=0, maximum=3.141592653589793, name='psi', latex_label='$\\psi$', unit=None, boundary='periodic')
+13:29 INFO    :   mass_1 = Constraint(minimum=1.1, maximum=2.1, name='mass_1', latex_label='$m_1$', unit=None)
+13:29 INFO    :   mass_2 = Constraint(minimum=1.1, maximum=2.1, name='mass_2', latex_label='$m_2$', unit=None)
+13:29 INFO    :   tilt_1 = 0.0
+13:29 INFO    :   tilt_2 = 0.0
+13:29 INFO    :   phi_12 = 0.0
+13:29 INFO    :   dec = 0.0459
+13:29 INFO    :   ra = 4.8687
+13:29 INFO    :   geocent_time = 1264079376
+13:29 INFO    :   phase = 0.0
+13:30 INFO    : Single likelihood evaluation took 3.330e-01 s
+13:30 INFO    : Using sampler Dynesty with kwargs {'bound': 'multi', 'sample': 'rwalk', 'verbose': True, 'periodic': None, 'reflective': None, 'check_point_delta_t': 1800, 'nlive': 1000, 'first_update': None, 'walks': 100, 'npdim': None, 'rstate': None, 'queue_size': 64, 'pool': None, 'use_pool': None, 'live_points': None, 'logl_args': None, 'logl_kwargs': None, 'ptform_args': None, 'ptform_kwargs': None, 'enlarge': 1.5, 'bootstrap': None, 'vol_dec': 0.5, 'vol_check': 8.0, 'facc': 0.2, 'slices': 5, 'update_interval': 600, 'print_func': <bound method Dynesty._print_func of <bilby.core.sampler.dynesty.Dynesty object at 0x7fc068f05820>>, 'dlogz': 0.1, 'maxiter': None, 'maxcall': None, 'logl_max': inf, 'add_live': True, 'print_progress': True, 'save_bounds': False, 'n_effective': 1000, 'maxmcmc': 5000, 'nact': 5}
+13:30 INFO    : Checkpoint every check_point_delta_t = 20000s
+13:30 INFO    : Using dynesty version 1.1
+13:30 INFO    : Using the bilby-implemented rwalk sample method with ACT estimated walks
+13:30 INFO    : Setting up multiproccesing pool with 64 processes.
+13:30 INFO    : Resume file bilby_4.85_0.0_followup/bilby_4.85_0.0_followup_resume.pickle does not exist.
+13:30 INFO    : Generating initial points from the prior
+19:14 INFO    : Written checkpoint file bilby_4.85_0.0_followup/bilby_4.85_0.0_followup_resume.pickle
+00:49 INFO    : Written checkpoint file bilby_4.85_0.0_followup/bilby_4.85_0.0_followup_resume.pickle
+06:25 INFO    : Written checkpoint file bilby_4.85_0.0_followup/bilby_4.85_0.0_followup_resume.pickle
+11:59 INFO    : Written checkpoint file bilby_4.85_0.0_followup/bilby_4.85_0.0_followup_resume.pickle
+11:59 INFO    : Writing 2918 current samples to bilby_4.85_0.0_followup/bilby_4.85_0.0_followup_samples.dat
+13:35 INFO    : Written checkpoint file bilby_4.85_0.0_followup/bilby_4.85_0.0_followup_resume.pickle
+13:35 INFO    : Writing 4775 current samples to bilby_4.85_0.0_followup/bilby_4.85_0.0_followup_samples.dat
+13:35 INFO    : Starting to close worker pool.
+13:35 INFO    : Finished closing worker pool.
+13:36 INFO    : Sampling time: 23:57:12.982908
+13:36 INFO    : Summary of results:
+nsamples: 23915
+ln_noise_evidence: -2435751.151
+ln_evidence: -2435712.447 +/-  0.191
+ln_bayes_factor: 38.704 +/-  0.191
+

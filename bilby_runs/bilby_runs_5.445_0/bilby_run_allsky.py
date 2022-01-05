@@ -8,9 +8,9 @@ from gwpy.timeseries import TimeSeries
 import numpy as np
 
 
-outdir = 'bilby_output_4'
+outdir = 'bilby_5.445_0_followup'
 # outdir = '/scrah/users/deep1018/GW170817-dynesty/inject-lambda-0-sample-z-flatz-prior-run-2'
-label = 'bilby_run_4_fullsky_ra5.445_dec0.0'
+label = 'bilby_5.445_0_followup'
 bilby.core.utils.setup_logger(outdir=outdir, label=label,
                               log_level='info')
 logger = bilby.core.utils.logger

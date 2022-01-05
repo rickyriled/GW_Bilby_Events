@@ -8,8 +8,8 @@ from gwpy.timeseries import TimeSeries
 import numpy as np
 
 
-outdir = '/home/ricky/Deeps_script/bilby_output_5.4_0.2'
-label = 'bilby_run_5.4_0.2_delta'
+outdir = 'bibly_5.445_0_followup_trueloc'
+label = 'bilby_5.445_0_followup_trueloc'
 bilby.core.utils.setup_logger(outdir=outdir, label=label,
                               log_level='info')
 logger = bilby.core.utils.logger
@@ -92,7 +92,7 @@ ifo_list.plot_data(outdir=outdir, label=label)
 # createprior; sample in chirp_mass and mass_ratio
 prior_dictionary = dict(
     chirp_mass=bilby.gw.prior.Uniform(name='chirp_mass', minimum=1.40, maximum=1.46),
-    mass_ratio=bilby.gw.prior.Uniform(name='mass_ratio', minimum=0.1, maximum=1),
+    mass_ratio=bilby.gw.prior.Uniform(name='mass_ratio', minimum=0.25, maximum=1),
     mass_1=bilby.gw.prior.Constraint(name='mass_1', minimum=1.0, maximum=3.0),
     mass_2=bilby.gw.prior.Constraint(name='mass_2', minimum=1.0, maximum=3.0),
     a_1=bilby.gw.prior.Uniform(name='a_1', minimum=0, maximum=0.05,
@@ -105,10 +105,10 @@ prior_dictionary = dict(
     phi_jl=bilby.gw.prior.Uniform(name='phi_jl', minimum=0, maximum=2 * np.pi,
                                   boundary='periodic', latex_label='$\\phi_{JL}$', unit=None),
     luminosity_distance=bilby.gw.prior.UniformComovingVolume(name='luminosity_distance',
-                                                             minimum=10, maximum=1000, latex_label='$d_L$',
+                                                             minimum=0, maximum=500, latex_label='$d_L$',
                                                              unit='Mpc', boundary=None),
-    dec=bilby.core.prior.DeltaFunction(peak=0.2),
-    ra=bilby.core.prior.DeltaFunction(peak=5.4),
+    dec=bilby.core.prior.DeltaFunction(peak=0.0),
+    ra=bilby.core.prior.DeltaFunction(peak=5.445),
     theta_jn=bilby.prior.Sine(name='theta_jn', latex_label='$\\theta_{JN}$',
                               unit=None, minimum=0, maximum=np.pi, boundary=None),
     psi=bilby.gw.prior.Uniform(name='psi', minimum=0, maximum=np.pi, boundary='periodic',

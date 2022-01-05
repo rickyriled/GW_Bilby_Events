@@ -8,9 +8,9 @@ from gwpy.timeseries import TimeSeries
 import numpy as np
 
 
-outdir = 'broad_prior'
+outdir = 'bilby_3.0_-1.2_followup'
 # outdir = '/scrah/users/deep1018/GW170817-dynesty/inject-lambda-0-sample-z-flatz-prior-run-2'
-label = 'bilby_broad_prior'
+label = 'bilby_3.0_-1.2_followup'
 bilby.core.utils.setup_logger(outdir=outdir, label=label,
                               log_level='info')
 logger = bilby.core.utils.logger
@@ -92,8 +92,8 @@ ifo_list.plot_data(outdir=outdir, label=label)
 
 # create a GW170817 prior; sample in chirp_mass and mass_ratio
 prior_dictionary = dict(
-    chirp_mass=bilby.gw.prior.Uniform(name='chirp_mass', minimum=1, maximum=1.75),
-    mass_ratio=bilby.gw.prior.Uniform(name='mass_ratio', minimum=0.1, maximum=1),
+    chirp_mass=bilby.gw.prior.Uniform(name='chirp_mass', minimum=1.25, maximum=1.35),
+    mass_ratio=bilby.gw.prior.Uniform(name='mass_ratio', minimum=0.33, maximum=1),
     mass_1=bilby.gw.prior.Constraint(name='mass_1', minimum=1, maximum=2.4),
     mass_2=bilby.gw.prior.Constraint(name='mass_2', minimum=1, maximum=2.4),
     a_1=bilby.gw.prior.Uniform(name='a_1', minimum=0, maximum=0.05,
@@ -106,10 +106,10 @@ prior_dictionary = dict(
     phi_jl=bilby.gw.prior.Uniform(name='phi_jl', minimum=0, maximum=2 * np.pi,
                                   boundary='periodic', latex_label='$\\phi_{JL}$', unit=None),
     luminosity_distance=bilby.gw.prior.UniformComovingVolume(name='luminosity_distance',
-                                                             minimum=10, maximum=1200, latex_label='$d_L$',
+                                                             minimum=10, maximum=500, latex_label='$d_L$',
                                                              unit='Mpc', boundary=None),
-    dec=bilby.core.prior.DeltaFunction(peak=-1.2),
-    ra=bilby.core.prior.DeltaFunction(peak=3.0),
+    dec=bilby.core.prior.DeltaFunction(peak=-1.2456),
+    ra=bilby.core.prior.DeltaFunction(peak=2.9355),
     theta_jn=bilby.prior.Sine(name='theta_jn', latex_label='$\\theta_{JN}$',
                               unit=None, minimum=0, maximum=np.pi, boundary=None),
     psi=bilby.gw.prior.Uniform(name='psi', minimum=0, maximum=np.pi, boundary='periodic',
