@@ -8,9 +8,9 @@ from gwpy.timeseries import TimeSeries
 import numpy as np
 
 
-outdir = 'bilby_4.85_0.0_followup_92.5'
+outdir = 'bilby_4.85_0.0_trueloc_newprior'
 # outdir = '/scrah/users/deep1018/GW170817-dynesty/inject-lambda-0-sample-z-flatz-prior-run-2'
-label = 'bilby_4.85_0.0_followup_92.5'
+label = 'bilby_4.85_0.0_followup_newprior'
 bilby.core.utils.setup_logger(outdir=outdir, label=label,
                               log_level='info')
 logger = bilby.core.utils.logger
@@ -94,8 +94,8 @@ ifo_list.plot_data(outdir=outdir, label=label)
 prior_dictionary = dict(
     chirp_mass=bilby.gw.prior.Uniform(name='chirp_mass', minimum=1.1, maximum=1.25),
     mass_ratio=bilby.gw.prior.Uniform(name='mass_ratio', minimum=0.25, maximum=1),
-    mass_1=bilby.gw.prior.Constraint(name='mass_1', minimum=1.1, maximum=2.1),
-    mass_2=bilby.gw.prior.Constraint(name='mass_2', minimum=1.1, maximum=2.1),
+    mass_1=bilby.gw.prior.Constraint(name='mass_1', minimum=0.9, maximum=2.2),
+    mass_2=bilby.gw.prior.Constraint(name='mass_2', minimum=0.9, maximum=2.2),
     a_1=bilby.gw.prior.Uniform(name='a_1', minimum=0, maximum=0.05,
                                latex_label='$a_1$', unit=None, boundary=None),
     a_2=bilby.gw.prior.Uniform(name='a_2', minimum=0, maximum=0.05,
@@ -108,8 +108,8 @@ prior_dictionary = dict(
     luminosity_distance=bilby.gw.prior.UniformComovingVolume(name='luminosity_distance',
                                                              minimum=10, maximum=500, latex_label='$d_L$',
                                                              unit='Mpc', boundary=None),
-    dec=bilby.core.prior.DeltaFunction(peak=-0.08669),
-    ra=bilby.core.prior.DeltaFunction(peak=4.7994),
+    dec=bilby.core.prior.DeltaFunction(peak=0.0),
+    ra=bilby.core.prior.DeltaFunction(peak=4.85),
     theta_jn=bilby.prior.Sine(name='theta_jn', latex_label='$\\theta_{JN}$',
                               unit=None, minimum=0, maximum=np.pi, boundary=None),
     psi=bilby.gw.prior.Uniform(name='psi', minimum=0, maximum=np.pi, boundary='periodic',

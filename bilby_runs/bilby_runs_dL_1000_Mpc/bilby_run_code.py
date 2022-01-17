@@ -12,7 +12,7 @@ outdir = 'bilby_1000_mpc'
 # outdir = '/scrah/users/deep1018/GW170817-dynesty/inject-lambda-0-sample-z-flatz-prior-run-2'
 label = 'bilby_1000_mpc'
 bilby.core.utils.setup_logger(outdir=outdir, label=label,
-                              log_level='info')
+        log_level='info')
 logger = bilby.core.utils.logger
 
 roll_off = 0.4  # Roll off duration of tukey window in seconds
@@ -42,28 +42,28 @@ duration = 400
 start_time = trigger_time - duration
 
 injection_parameters = dict(
-    chirp_mass=chirp_mass, mass_ratio=mass_ratio, a_1=a_1, a_2=a_2,
-    tilt_1=tilt_1, tilt_2=tilt_2, theta_jn=theta_jn,
-    luminosity_distance=luminosity_distance, phi_jl=phi_jl,
-    psi=psi, phase=phase, geocent_time=trigger_time, phi_12=phi_12,
-    ra=ra, dec=dec
-)
+        chirp_mass=chirp_mass, mass_ratio=mass_ratio, a_1=a_1, a_2=a_2,
+        tilt_1=tilt_1, tilt_2=tilt_2, theta_jn=theta_jn,
+        luminosity_distance=luminosity_distance, phi_jl=phi_jl,
+        psi=psi, phase=phase, geocent_time=trigger_time, phi_12=phi_12,
+        ra=ra, dec=dec
+        )
 
 waveform_arguments = dict(waveform_approximant='TaylorF2ThreePointFivePN',
-                          reference_frequency=20.)
+        reference_frequency=20.)
 
 waveform_generator = bilby.gw.WaveformGenerator(
-    duration=duration, sampling_frequency=sampling_frequency,
-    frequency_domain_source_model=bilby.gw.source.lal_binary_black_hole,
-    waveform_arguments=waveform_arguments
-)
+        duration=duration, sampling_frequency=sampling_frequency,
+        frequency_domain_source_model=bilby.gw.source.lal_binary_black_hole,
+        waveform_arguments=waveform_arguments
+        )
 
 # load PSD files for O5
 psd_filenames = {
-    'H1': 'aligo_O4high_extrapolated.txt',
-    'L1': 'aligo_O4high_extrapolated.txt',
-    'V1': 'avirgo_O4high_NEW.txt'
-}
+        'H1': 'aligo_O4high_extrapolated.txt',
+        'L1': 'aligo_O4high_extrapolated.txt',
+        'V1': 'avirgo_O4high_NEW.txt'
+        }
 
 ifo_list = bilby.gw.detector.InterferometerList([])
 for det in ["H1", "L1", "V1"]:
@@ -71,19 +71,19 @@ for det in ["H1", "L1", "V1"]:
     freq, asd = np.loadtxt(psd_filenames[det], unpack=True)
     psd = asd**2
     ifo.power_spectral_density = bilby.gw.detector.PowerSpectralDensity(
-        frequency_array=freq, psd_array=psd
-    )
+            frequency_array=freq, psd_array=psd
+            )
     ifo.set_strain_data_from_power_spectral_density(
-        sampling_frequency=sampling_frequency,
-        duration=duration,
-        start_time=start_time
-    )
+            sampling_frequency=sampling_frequency,
+            duration=duration,
+            start_time=start_time
+            )
     ifo_list.append(ifo)
 
 ifo_list.inject_signal(
-    parameters=injection_parameters,
-    waveform_generator=waveform_generator
-)
+        parameters=injection_parameters,
+        waveform_generator=waveform_generator
+        )
 
 logger.info("Finished Injecting signal")
 logger.info("Saving IFO data plots to {}".format(outdir))
@@ -92,13 +92,13 @@ ifo_list.plot_data(outdir=outdir, label=label)
 
 # create a GW170817 prior; sample in chirp_mass and mass_ratio
 prior_dictionary = dict(
-    chirp_mass=bilby.gw.prior.Uniform(name='chirp_mass', minimum=1.225, maximum=1.375),
-    mass_ratio=bilby.gw.prior.Uniform(name='mass_ratio', minimum=0.4, maximum=1),
-    mass_1=bilby.gw.prior.Constraint(name='mass_1', minimum=0.9, maximum=2.2),
-    mass_2=bilby.gw.prior.Constraint(name='mass_2', minimum=0.9, maximum=2.2),
-    a_1=bilby.gw.prior.Uniform(name='a_1', minimum=0, maximum=0.05,
-                               latex_label='$a_1$', unit=None, boundary=None),
-    a_2=bilby.gw.prior.Uniform(name='a_2', minimum=0, maximum=0.05,
+        chirp_mass=bilby.gw.prior.Uniform(name='chirp_mass', minimum=1.225, maximum=1.375),
+        mass_ratio=bilby.gw.prior.Uniform(name='mass_ratio', minimum=0.4, maximum=1),
+        mass_1=bilby.gw.prior.Constraint(name='mass_1', minimum=0.9, maximum=2.2),
+        mass_2=bilby.gw.prior.Constraint(name='mass_2', minimum=0.9, maximum=2.2),
+        a_1=bilby.gw.prior.Uniform(name='a_1', minimum=0, maximum=0.05,
+            latex_label='$a_1$', unit=None, boundary=None),
+        a_2=bilby.gw.prior.Uniform(name='a_2', minimum=0, maximum=0.05,
                                latex_label='$a_2$', unit=None, boundary=None),
     tilt_1=bilby.core.prior.DeltaFunction(peak=0.0),
     tilt_2=bilby.core.prior.DeltaFunction(peak=0.0),
