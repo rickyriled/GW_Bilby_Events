@@ -93,7 +93,7 @@ ifo_list.plot_data(outdir=outdir, label=label)
 # create a GW170817 prior; sample in chirp_mass and mass_ratio
 prior_dictionary = dict(
     chirp_mass=bilby.gw.prior.Uniform(name='chirp_mass', minimum=1.275, maximum=1.325),
-    mass_ratio=bilby.gw.prior.Uniform(name='mass_ratio', minimum=0.33, maximum=1),
+    mass_ratio=bilby.gw.prior.Uniform(name='mass_ratio', minimum=0.33, maximum=1.3),
     mass_1=bilby.gw.prior.Constraint(name='mass_1', minimum=1, maximum=2.4),
     mass_2=bilby.gw.prior.Constraint(name='mass_2', minimum=1, maximum=2.4),
     a_1=bilby.gw.prior.Uniform(name='a_1', minimum=0, maximum=0.05,
